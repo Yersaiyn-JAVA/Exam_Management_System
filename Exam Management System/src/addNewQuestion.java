@@ -196,7 +196,7 @@ public class addNewQuestion extends javax.swing.JFrame {
         String answer = jTextField5.getText();
         try{
             Connection con = ConnectionProvider.getCon();
-            PreparedStatement ps = con.prepareStatement("insert into question values(?, ?, ?, ?, ?, ?, ?)");
+            PreparedStatement ps = con.prepareStatement("insert into question(id, name, opt1, opt2, opt3, opt4, answer) values(?, ?, ?, ?, ?, ?, ?)");
             ps.setString(1, id);
             ps.setString(2, name);
             ps.setString(3, opt1);

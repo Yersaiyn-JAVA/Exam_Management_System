@@ -173,12 +173,12 @@ public class updateQuestion extends javax.swing.JFrame {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("select *from question where id = '"+id+"'");
             if (rs.next()){
-                jTextField2.setText(rs.getString("name"));
-                jTextField3.setText(rs.getString("opt1"));
-                jTextField4.setText(rs.getString("opt2"));
-                jTextField5.setText(rs.getString("opt3"));
-                jTextField6.setText(rs.getString("opt4"));
-                jTextField7.setText(rs.getString("answer"));
+                jTextField2.setText(rs.getString(2));
+                jTextField3.setText(rs.getString(3));
+                jTextField4.setText(rs.getString(4));
+                jTextField5.setText(rs.getString(5));
+                jTextField6.setText(rs.getString(6));
+                jTextField7.setText(rs.getString(7));
                 jTextField1.setEditable(false);
             } else{
                 JFrame jf = new JFrame();
